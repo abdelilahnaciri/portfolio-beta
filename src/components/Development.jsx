@@ -1,6 +1,6 @@
 import { OrbitControls, Stage } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import React from "react";
+import React, { memo } from "react";
 import Atom from "./Atom";
 import styled from "styled-components";
 
@@ -32,4 +32,4 @@ const Development = () => {
   );
 };
 
-export default Development;
+export default memo(Development);

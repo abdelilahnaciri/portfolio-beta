@@ -8,10 +8,10 @@ Source: https://sketchfab.com/3d-models/chair-b5ecdb6253a7454c916954bef6c10251
 Title: Chair
 */
 
-import React from "react";
+import React, { memo } from "react";
 import { useGLTF } from "@react-three/drei";
 
-export default function Model(props) {
+const Model = (props) => {
   const { nodes, materials } = useGLTF("/chair-transformed.glb");
   return (
     <group {...props} dispose={null}>
@@ -23,6 +23,8 @@ export default function Model(props) {
       />
     </group>
   );
-}
+};
 
 useGLTF.preload("/chair-transformed.glb");
+
+export default memo(Model);

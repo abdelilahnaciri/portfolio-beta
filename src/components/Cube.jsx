@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { memo, useRef } from "react";
 import { PerspectiveCamera, RenderTexture, Text } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
@@ -24,4 +24,4 @@ const Cube = () => {
   );
 };
 
-export default Cube;
+export default memo(Cube);

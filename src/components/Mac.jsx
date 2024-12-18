@@ -1,12 +1,12 @@
-import React, { useRef } from "react";
+import React, { memo, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { a as three } from "@react-spring/three";
 
-export default function Mac({ ...props }) {
+const Mac = ({ ...props }) => {
   const group = useRef();
   const { nodes, materials } = useGLTF("/mac-draco.glb");
   return (
-    <group ref={group} {...props} dispose={null} >
+    <group ref={group} {...props} dispose={null}>
       <group position={[0, 2.96, -0.13]} rotation={[Math.PI / 2, 0, 0]}>
         <mesh
           material={materials.aluminium}
@@ -23,4 +23,6 @@ export default function Mac({ ...props }) {
       </group>
     </group>
   );
-}
+};
+
+export default memo(Mac);

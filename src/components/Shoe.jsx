@@ -1,8 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import * as THREE from "three";
 import { useGLTF } from "@react-three/drei";
 
-export default function Shoe({ color, ...props }) {
+const Shoe = ({ color, ...props }) => {
   const { nodes, materials } = useGLTF("/shoe.gltf");
   return (
     <group {...props} dispose={null}>
@@ -68,6 +68,8 @@ export default function Shoe({ color, ...props }) {
       />
     </group>
   );
-}
+};
 
 useGLTF.preload("/shoe.gltf");
+
+export default memo(Shoe);
