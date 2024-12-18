@@ -13,6 +13,15 @@ const Desc = styled.div`
   position: absolute;
   top: 100px;
   right: 100px;
+
+  @media only screen and (max-width: 768px) {
+    padding: 10px;
+    font-size: 13px;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
 `;
 
 const ProductDesign = () => {

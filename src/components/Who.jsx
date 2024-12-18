@@ -19,13 +19,25 @@ const Container = styled.div`
   width: 1400px;
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const Left = styled.div`
   flex: 1;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 const Title = styled.h1`
   font-size: 74px;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 30px;
+  }
 `;
 
 const Right = styled.div`
@@ -34,6 +46,11 @@ const Right = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+
+  @media only screen and (max-width: 768px) {
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 const WhatWeDo = styled.div`
@@ -53,6 +70,10 @@ const Subtitle = styled.h2`
 const Desc = styled.p`
   font-size: 24px;
   color: lightgray;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 const Button = styled.button`

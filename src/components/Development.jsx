@@ -13,6 +13,15 @@ const Desc = styled.div`
   position: absolute;
   top: 100px;
   right: 100px;
+
+  @media only screen and (max-width: 768px) {
+    padding: 10px;
+    font-size: 13px;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
 `;
 
 const Development = () => {
@@ -22,7 +31,7 @@ const Development = () => {
         <Stage environment={"city"} intensity={0.6}>
           <Atom />
         </Stage>
-        <OrbitControls enableZoom={false} />
+        <OrbitControls enableZoom={false} autoRotate />
       </Canvas>
       <Desc>
         We develop products with a strong focus on both world class and ensuring

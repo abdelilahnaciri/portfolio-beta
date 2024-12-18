@@ -64,10 +64,11 @@ const Subtitle = styled.h2`
   color: #da4ea2;
 `;
 const Desc = styled.p`
-  font-size: 14px;
+  font-size: 24px;
   color: lightgray;
 
   @media only screen and (max-width: 768px) {
+    font-size: 14px;
     padding: 20px;
     text-align: center;
   }
