@@ -9,10 +9,6 @@ body,
   background: ivory;
 }
 
-canvas {
-  touch-action: none;
-}
-
 /* .htmlScreen iframe {
   width: 1024px;
   height: 670px;
@@ -21,17 +17,16 @@ canvas {
   background: #000;
 } */
 
-.htmlScreen {
+/* .htmlScreen {
   overflow: hidden;
   margin: 10px;
-}
+} */
 
 .htmlScreen iframe {
-  width: 1220px;
+  width: 1210px;
   height: 700px;
   border: none;
   border-radius: 5px;
   background: #000;
   box-shadow: 0 0 5px 5px #000;
-  /* border: 10px solid red; */
 }

@@ -9,12 +9,10 @@ import {
 } from "@react-three/drei";
 
 export default function Experience() {
-  // const computer = useGLTF(
-  //   "https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf"
-  // );
   const computer = useGLTF("./monitor.glb");
   const cup = useGLTF("./fullModel.glb");
-  console.log(cup);
+  const keyboard = useGLTF("./keyboard-1.glb");
+  // console.log(cup);
   return (
     <>
       <Environment preset="city" />
@@ -33,9 +31,9 @@ export default function Experience() {
       </mesh> */}
       <PresentationControls
         global
-        rotation={[0, -Math.PI * 0.4, 0]}
-        polar={[-0.1, 0.1]}
-        azimuth={[-0.5, 0.3]}
+        rotation={[0, -Math.PI * 0.2, 0]}
+        polar={[-0.4, 0.6]}
+        azimuth={[-0.6, 1.6]}
         config={{ mass: 2, tensin: 400 }}
         snap={{ mass: 4, tension: 400 }}
       >
@@ -46,7 +44,7 @@ export default function Experience() {
             intensity={65}
             color={"#ff6900"}
             rotation={[-0.1, Math.PI, 0]}
-            position={[0, 1, -1.15]}
+            position={[0, 1, 0.2]}
           />
           <primitive
             object={computer.scene}
@@ -58,9 +56,9 @@ export default function Experience() {
               transform
               wrapperClass="htmlScreen"
               distanceFactor={0.2}
-              position={[0.03, 0.01, 0.005]}
+              position={[0.03, 0, 0]}
               rotation={[0, Math.PI * 0.5, 0]}
-              occlude
+              // occlude
               // scale={[0.46, 0.46, 0.46]}
             >
               <iframe src={"https://bruno-simon.com/html/"} />
@@ -68,12 +66,18 @@ export default function Experience() {
           </primitive>
           <primitive
             object={cup.scene}
-            position={[1, -0.8, 0.5]}
+            position={[1, -0.8, 0.4]}
             scale={[0.25, 0.25, 0.25]}
+          />
+          <primitive
+            object={keyboard.scene}
+            position={[0, -0.75, 1.2]}
+            scale={[0.05, 0.05, 0.05]}
+            // rotation={[0, -Math.PI * 0.5, 0]}
           />
         </Float>
       </PresentationControls>
-      <ContactShadows position-y={-1.4} opacity={0.4} scale={5} blur={2.4} />
+      <ContactShadows position-y={-0.8} opacity={0.28} scale={6} blur={2.5} />
     </>
   );
 }
