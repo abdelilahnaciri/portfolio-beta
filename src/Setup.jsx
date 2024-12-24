@@ -74,13 +74,13 @@ export default function Experience() {
       <PresentationControls
         global
         rotation={[0, -Math.PI * 0.2, 0]}
-        // polar={[-0.4, 0.6]}
-        // azimuth={[-0.6, 1.6]}
-        // config={{ mass: 2, tensin: 400 }}
-        // snap={{ mass: 4, tension: 400 }}
+        polar={[-0.4, 0.6]}
+        azimuth={[-0.6, 1.6]}
+        config={{ mass: 2, tensin: 400 }}
+        snap={{ mass: 4, tension: 400 }}
       >
         <Float rotationIntensity={0.4}>
-          {/* <rectAreaLight
+          <rectAreaLight
             width={2.5}
             height={1.65}
             intensity={65}
@@ -103,9 +103,9 @@ export default function Experience() {
               // occlude
               // scale={[0.46, 0.46, 0.46]}
             >
-              <iframe src={"https://bruno-simon.com/html/"} />
+              {/* <iframe src={"https://bruno-simon.com/html/"} /> */}
             </Html>
-          </primitive> */}
+          </primitive>
 
           <primitive
             object={cup.scene}
@@ -116,7 +116,6 @@ export default function Experience() {
               <planeGeometry args={[1, 1, 16, 64]} />
               <shaderMaterial
                 ref={smokeShaderRef}
-                // wireframe
                 vertexShader={coffeeSmokeVertexShader}
                 fragmentShader={coffeeSmokeFragmentShader}
                 uniforms={{
@@ -125,15 +124,16 @@ export default function Experience() {
                 }}
                 side={THREE.DoubleSide}
                 transparent
+                // wireframe
               />
             </mesh>
           </primitive>
-          {/* <primitive
+          <primitive
             object={keyboard.scene}
             position={[0, -0.75, 1.2]}
             scale={[0.05, 0.05, 0.05]}
             // rotation={[0, -Math.PI * 0.5, 0]}
-          /> */}
+          />
         </Float>
       </PresentationControls>
       <ContactShadows position-y={-0.8} opacity={0.28} scale={6} blur={2.5} />
