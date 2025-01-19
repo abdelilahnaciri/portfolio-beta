@@ -14,7 +14,7 @@ void main()
   vec3 newPosition = position;
 
   // Twist
-  float angle = newPosition.y * 6.0;
+  float angle = newPosition.y * 5.0;
   newPosition.xz = rotate2D(newPosition.xz, angle);
   
   // Final position

@@ -6,17 +6,16 @@ import {
   Float,
   Environment,
   useGLTF,
-  OrbitControls,
 } from "@react-three/drei";
 import coffeeSmokeVertexShader from "./shaders/coffeeSmoke/vertex.glsl";
 import coffeeSmokeFragmentShader from "./shaders/coffeeSmoke/fragment.glsl";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { uniforms } from "three/tsl";
 
 export default function Experience() {
   const computer = useGLTF("./monitor.glb");
-  const cup = useGLTF("./fullModel.glb");
+  const cup = useGLTF("./coffee-cup.glb");
   const keyboard = useGLTF("./keyboard-1.glb");
   // console.log(cup);
 
